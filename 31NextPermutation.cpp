@@ -10,7 +10,7 @@ using namespace std;
 class Solution {
    public:
     void nextPermutation(vector<int>& nums) {
-        // finding the furtherst point where a smaller element exists before an element
+        // finding the furthest point where a smaller element exists before an greater element
         int i;
         for (i = nums.size() - 2; i >= 0; i--) {
             if (nums[i] < nums[i + 1])
@@ -31,7 +31,7 @@ class Solution {
             }
         }
 
-        // the elements after i will be in descending order. Reversing will sort make this ascending
+        // the elements after i will now be be in descending order. Reversing will make this ascending
         // reverse the elements after i to get the permutation right after the given permutation
         reverse(nums.begin() + i + 1, nums.end());
     }
