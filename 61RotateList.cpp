@@ -35,7 +35,7 @@ class Solution {
         // we attach the tail to the head to make it a circular linked list
         curr->next = head;
 
-        // we need to move n-k nodes the tail
+        // we need to move n-k nodes from the tail
         k = n - k;
         while (k--) {
             curr = curr->next;
